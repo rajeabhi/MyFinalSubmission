@@ -1,0 +1,12 @@
+1. Open "ProjectManager" solution in Visual Studio 
+2. Open "Web.config" in "ProjectManager" project
+3. Update your database details in connection string key name="ProjectManagerConnection"
+4. Rebuild project (To update your database with latest Entities)
+5. Make sure "ProjectManager" is Start as Project and then Run project using F5
+6. Note down on which url:port it is running
+7. Open "ProjectManagerUI in Visual Code
+8. Open "shared.service.ts" on path "/src/app/services"
+9. Change ProjectManger API's url:port in "url:string" variable
+10. In Visual Code (ProjectManagerUI) open Terminal
+11. Type "ng serve --open"
+12. Application will start in browser and it is ready to test.

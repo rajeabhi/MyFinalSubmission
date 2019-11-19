@@ -1,0 +1,226 @@
+Windows PowerShell
+Copyright (C) 2015 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Administrator\Desktop\ProjectManager>  .\packages\NBench.Runner.1.2.2\tools\net452\NBench.Runner.exe .\ProjectManager.Test\bin\Debug\ProjectManager.Test.dll
+Executing Benchmarks in C:\Users\Administrator\Desktop\ProjectManager\ProjectManager.Test\bin\Debug\ProjectManager.Test.dll
+------------ STARTING ProjectManager.Test.Performance.PerformanceTest+AddThroughput_ThroughputMode ----------
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.2323915
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,646,265.03 , ns / operations: 38.99
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.2336814
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,504,699.99 , ns / operations: 39.21
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.2371688
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,129,671.36 , ns / operations: 39.79
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.2315939
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,734,589.73 , ns / operations: 38.86
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.2343519
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,431,728.95 , ns / operations: 39.32
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.2323089
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,655,383.84 , ns / operations: 38.98
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.2354835
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,309,518.50 , ns / operations: 39.51
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.2365630
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,194,024.42 , ns / operations: 39.69
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.2370063
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,146,901.16 , ns / operations: 39.77
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.2384235
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 24,997,426.85 , ns / operations: 40.00
+--------------- END WARMUP ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.2366842
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,181,123.20 , ns / operations: 39.71
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.2373287
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,112,740.26 , ns / operations: 39.82
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.2353724
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,321,465.05 , ns / operations: 39.49
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.2357276
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,283,310.06 , ns / operations: 39.55
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.2378237
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,060,471.27 , ns / operations: 39.90
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.2389568
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 24,941,637.99 , ns / operations: 40.09
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.2376797
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,075,654.34 , ns / operations: 39.88
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.2394876
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 24,886,357.37 , ns / operations: 40.18
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.2356950
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,286,807.10 , ns / operations: 39.55
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.2359961
+[Counter] AddCounter - operations: 5,959,974.00 ,operations: /s 25,254,544.46 , ns / operations: 39.60
+--------------- END RUN ---------------
+
+--------------- RESULTS: ProjectManager.Test.Performance.PerformanceTest+AddThroughput_ThroughputMode ---------------
+--------------- DATA ---------------
+[Counter] AddCounter: Max: 5,959,974.00 operations, Average: 5,959,974.00 operations, Min: 5,959,974.00 operations, StdDev: 0.00 operations
+[Counter] AddCounter: Max / s: 25,321,465.05 operations, Average / s: 25,140,411.11 operations, Min / s: 24,886,357.37 operations, StdDev / s: 150,819.93 operations
+
+--------------- ASSERTIONS ---------------
+[PASS] Expected [Counter] AddCounter to must be greater than 20,000,000.00 operations; actual value was 25,140,411.11 operations.
+
+------------ FINISHED ProjectManager.Test.Performance.PerformanceTest+AddThroughput_ThroughputMode ----------
+------------ STARTING ProjectManager.Test.Performance.PerformanceTest+AddThroughput_IterationsMode ----------
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.8154102
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,527,532.28 , ns / operations: 40.77
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.8124835
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,615,884.51 , ns / operations: 40.62
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.8142823
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,561,506.49 , ns / operations: 40.71
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.8183347
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,439,877.72 , ns / operations: 40.92
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.8620129
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 23,201,508.93 , ns / operations: 43.10
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.8161327
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,505,818.72 , ns / operations: 40.81
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.8117880
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,636,974.19 , ns / operations: 40.59
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.8279140
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,157,098.44 , ns / operations: 41.40
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.8208050
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,366,323.30 , ns / operations: 41.04
+--------------- END WARMUP ---------------
+
+--------------- BEGIN WARMUP ---------------
+Elapsed: 00:00:00.8203401
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,380,132.09 , ns / operations: 41.02
+--------------- END WARMUP ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.8218216
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,336,181.96 , ns / operations: 41.09
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.8054521
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,830,775.16 , ns / operations: 40.27
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.8254068
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,230,476.41 , ns / operations: 41.27
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.8069646
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,784,234.65 , ns / operations: 40.35
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.8100903
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,688,605.70 , ns / operations: 40.50
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.8035514
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,889,509.25 , ns / operations: 40.18
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.8398840
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 23,812,812.25 , ns / operations: 41.99
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.8126934
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,609,526.79 , ns / operations: 40.63
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.8092577
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 24,714,006.43 , ns / operations: 40.46
+--------------- END RUN ---------------
+
+--------------- BEGIN RUN ---------------
+Elapsed: 00:00:00.7635538
+[Counter] AddCounter - operations: 20,000,000.00 ,operations: /s 26,193,308.19 , ns / operations: 38.18
+--------------- END RUN ---------------
+
+--------------- RESULTS: ProjectManager.Test.Performance.PerformanceTest+AddThroughput_IterationsMode ---------------
+--------------- DATA ---------------
+[Counter] AddCounter: Max: 20,000,000.00 operations, Average: 20,000,000.00 operations, Min: 20,000,000.00 operations, StdDev: 0.00 operations
+[Counter] AddCounter: Max / s: 26,193,308.19 operations, Average / s: 24,708,943.68 operations, Min / s: 23,812,812.25 operations, StdDev / s: 618,035.45 operations
+
+--------------- ASSERTIONS ---------------
+[PASS] Expected [Counter] AddCounter to must be greater than 20,000,000.00 operations; actual value was 24,708,943.68 operations.
+
+------------ FINISHED ProjectManager.Test.Performance.PerformanceTest+AddThroughput_IterationsMode ----------
+PS C:\Users\Administrator\Desktop\ProjectManager>

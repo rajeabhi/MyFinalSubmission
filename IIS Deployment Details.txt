@@ -1,0 +1,4 @@
+VM: blrprdhost11.iiht.tech
+
+API: http://localhost/ProjectManager.API/
+UI: http://localhost/ProjectManagerUI

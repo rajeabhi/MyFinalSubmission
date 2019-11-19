@@ -1,0 +1,53 @@
+<div class="container p-5">
+  <form ngNativeValidate (submit)="GetAllTasks()">
+    <div class="row justify-content-center">
+      <div class="input-group input-group-sm mb-3 col-5">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Project</span>
+        </div>
+        <select name="project" class="form-control" [(ngModel)]="projectId" required style="height:33px;">
+          <option [value]="itempt.ProjectId" *ngFor="let itempt of itemProject">{{itempt.ProjectName}}</option>
+        </select>
+      </div>
+      <div class="input-group input-group-sm mb-3 col-2">
+        <button type="submit" class="btn-sm btn-success">Search</button>
+      </div>
+    </div>
+  </form>
+  <div class="row justify-content-center">
+    <div class="input-group input-group-sm mb-3 col-12">
+      <table class="table table-sm table-striped table-hover">
+        <thead class="bg-info">
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Parent</th>
+            <th scope="col">Priority</th>
+            <th scope="col">Start</th>
+            <th scope="col">End</th>
+            <th scope="col" style="width:8%"></th>
+            <th scope="col" style="width:8%"></th>
+            <th scope="col" style="width:8%"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of list">
+            <td>{{item.Task}}</td>
+            <td>{{item.ParentTaskName}}</td>
+            <td>{{item.Priority}}</td>
+            <td>{{item.StartDate | date:'dd/MM/yyyy'}}</td>
+            <td>{{item.EndDate | date:'dd/MM/yyyy'}}</td>
+            <td>
+              <button type="button" [routerLink]="['/addtask', item.TaskId]" class="btn btn-sm btn-block" [class.btn-outline-primary]="!item.IsEnded" [disabled]="item.IsEnded">Edit</button>
+            </td>
+            <td>
+              <button type="button" (click)="EndTask(item.TaskId)" class="btn btn-sm btn-block" [class.btn-outline-warning]="AllowEnd(item.EndDate)" [disabled]="!AllowEnd(item.EndDate)">End</button>
+            </td>
+            <td>
+              <button type="button" (click)="Delete(item.TaskId)" class="btn btn-sm btn-block" [class.btn-outline-danger]="item.IsEnded" [disabled]="!item.IsEnded">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="container p-5">
+  <form ngNativeValidate (submit)="Add()">
+    <div class="row justify-content-center">
+      <div class="input-group input-group-sm mb-3 col-4">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Project</span>
+        </div>
+        <select name="project" class="form-control" [(ngModel)]="item.ProjectId" required [disabled]="taskId != undefined">
+          <option [value]="itempt.ProjectId" *ngFor="let itempt of itemProject">{{itempt.ProjectName}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="input-group input-group-sm mb-3 col-4">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Task</span>
+        </div>
+        <input type="text" [(ngModel)]="item.Task" id="task" name="task" required class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <label class="form-check-label">
+        <input type="checkbox" [checked]="chkSetDates" data-md-icheck (change)="checkChanged($event)" class="form-check-input" [disabled]="taskId != undefined">Parent Task
+      </label>
+    </div>
+    <div class="row justify-content-center">
+      <div class="input-group input-group-sm mb-3 col-4">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">0</span>
+        </div>
+        <input type="range" [(ngModel)]="item.Priority" value="item.Priority" class="form-control" id="priority" name="priority" min="1" max="30" step="1" [disabled]="chkSetDates">
+        <div class="input-group-append">
+          <span class="input-group-text">{{item.Priority}}</span>
+          <span class="input-group-text">30</span>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="input-group input-group-sm mb-3 col-4">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Parent Task</span>
+        </div>
+        <select name="parentTask" class="form-control" [(ngModel)]="item.ParentTaskId" [disabled]="chkSetDates">
+          <option [value]="itempt.ParentTaskId" *ngFor="let itempt of itemParentTask">{{itempt.ParentTaskName}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="input-group input-group-sm mb-3 col-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Start Date</span>
+        </div>
+        <input name="startDate" type="text" required placeholder="Datepicker" class="form-control" bsDatepicker [(bsValue)]="item.StartDate" value="{{ item.StartDate | date:'MM/dd/yyyy' }}" [bsConfig]="{ containerClass: 'theme-default' }" [disabled]="chkSetDates">
+      </div>
+      <div class="input-group input-group-sm mb-3 col-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">End Date</span>
+        </div>
+        <input name="endDate" type="text" required placeholder="Datepicker" class="form-control" bsDatepicker [(bsValue)]="item.EndDate" value="{{ item.EndDate | date:'MM/dd/yyyy' }}" [bsConfig]="{ containerClass: 'theme-default' }" [disabled]="chkSetDates">
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="input-group input-group-sm mb-3 col-4">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">User</span>
+        </div>
+        <select name="user" class="form-control" [(ngModel)]="item.UserId" [disabled]="chkSetDates">
+          <option [value]="itempt.UserId" *ngFor="let itempt of itemUser">{{itempt.FirstName + " " + itempt.LastName}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="input-group input-group-sm mb-3 col-2 justify-content-end">
+        <button type="submit" class="btn btn-success">{{ taskId == undefined ? 'Add Task' : 'Update Task' }}</button>
+      </div>
+      <div class="input-group input-group-sm mb-3 col-2" *ngIf="taskId == undefined">
+        <button type="button" class="btn btn-primary" (click)="Reset(); msg = {};">Reset</button>
+      </div>
+      <div class="input-group input-group-sm mb-3 col-2" *ngIf="taskId != undefined">
+        <button type="button" class="btn btn-secondary" [routerLink]="['/viewtask']">Back to View</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="alert alert-success" role="alert" *ngIf="(msg | json) != '{}'">
+    <strong>Success!</strong> {{msg}}
+  </div>
+</div>

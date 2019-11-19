@@ -1,0 +1,105 @@
+<div class="card bg-light">
+  <div class="card-body">
+    <div class="container">
+      <form name="projectForm" ngNativeValidate (submit)="Add()">
+        <div class="row justify-content-center">
+          <div class="input-group input-group-sm mb-3 col-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Project Name</span>
+            </div>
+            <input type="text" [(ngModel)]="item.ProjectName" id="projectName" name="projectName" required class="form-control" aria-label="Small"
+              aria-describedby="inputGroup-sizing-sm">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <label class="form-check-label">
+            <input type="checkbox" [checked]="chkSetDates" data-md-icheck (change)="checkChanged($event)" class="form-check-input">Set StartDate & EndDate
+          </label>
+        </div>
+        <div class="row justify-content-center">
+          <div class="input-group input-group-sm mb-3 col-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Start Date</span>
+            </div>
+            <input type="text" required placeholder="Datepicker" class="form-control" bsDatepicker [(bsValue)]="item.StartDate" value="{{ item.StartDate | date:'MM/dd/yyyy' }}" [bsConfig]="{ containerClass: 'theme-default' }" [disabled]="!chkSetDates">
+          </div>
+          <div class="input-group input-group-sm mb-3 col-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">End Date</span>
+            </div>
+            <input type="text" required placeholder="Datepicker" class="form-control" bsDatepicker [(bsValue)]="item.EndDate" value="{{ item.EndDate | date:'MM/dd/yyyy' }}" [bsConfig]="{ containerClass: 'theme-default' }" [disabled]="!chkSetDates">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="input-group input-group-sm mb-3 col-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">0</span>
+            </div>
+            <input type="range" [(ngModel)]="item.Priority" value="item.Priority" class="form-control" id="priority" name="priority" min="1" max="30" step="1">
+            <div class="input-group-append">
+              <span class="input-group-text">{{item.Priority}}</span>
+              <span class="input-group-text">30</span>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="input-group input-group-sm mb-3 col-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Manager</span>
+            </div>
+            <select name="manager" class="form-control" [(ngModel)]="item.ManagerId">
+              <option [value]="itempt.UserId" *ngFor="let itempt of itemManager ">{{itempt.FirstName + " " + itempt.LastName}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="input-group input-group-sm mb-3 col-2 justify-content-end">
+            <button type="submit" class="btn btn-success">{{ projectId == undefined ? 'Add Project' : 'Update Project' }}</button>
+          </div>
+          <div class="input-group input-group-sm mb-3 col-2">
+            <button type="button" class="btn btn-primary" (click)="Reset(); msg = {};">Reset</button>
+          </div>
+        </div>
+      </form>
+      <div class="alert alert-success" role="alert" *ngIf="(msg | json) != '{}'">
+        <strong>Success!</strong> {{msg}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container p-5">
+  <div class="row justify-content-center">
+    <div class="input-group input-group-sm mb-3 col-12">
+      <table id="projectTable" class="display" style="width:100%">
+        <thead class="bg-info">
+          <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Total Tasks</th>
+            <th scope="col">Completed Tasks</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Priority</th>
+            <th scope="col" style="width:8%"></th>
+            <th scope="col" style="width:8%"></th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+          <tr *ngFor="let item of list">
+            <td>{{item.ProjectName}}</td>
+            <td>{{item.TotalTasks}}</td>
+            <td>{{item.CompletedTasks}}</td>
+            <td>{{item.StartDate | date:'dd/MM/yyyy'}}</td>
+            <td>{{item.EndDate | date:'dd/MM/yyyy'}}</td>
+            <td>{{item.Priority}}</td>
+            <td>
+              <button type="button" (click)="Edit(item.ProjectId)" class="btn btn-sm btn-block btn-outline-primary">Edit</button>
+            </td>
+            <td>
+              <button type="button" (click)="Suspend(item.ProjectId)" class="btn btn-sm btn-block" [class.btn-outline-danger]="!item.IsSuspended"  [disabled]="item.IsSuspended">Suspend</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<testsuite name="PhantomJS 2.1.1 (Windows 8 0.0.0)" package="" timestamp="2019-11-19T17:19:02" id="0" hostname="ABHICHAITU" tests="53" errors="0" failures="0" time="49.579">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"/>
+  </properties>
+  <testcase name="SharedService GetAllUsers" time="0.086" classname="SharedService"/>
+  <testcase name="SharedService GetUserById" time="0.063" classname="SharedService"/>
+  <testcase name="SharedService AddUser" time="0.056" classname="SharedService"/>
+  <testcase name="SharedService DeleteUser" time="0.055" classname="SharedService"/>
+  <testcase name="SharedService UpdateUser" time="0.069" classname="SharedService"/>
+  <testcase name="SharedService GetProject" time="0.057" classname="SharedService"/>
+  <testcase name="SharedService GetProjectById" time="0.066" classname="SharedService"/>
+  <testcase name="SharedService GetProjectList" time="0.108" classname="SharedService"/>
+  <testcase name="SharedService AddProject" time="0.078" classname="SharedService"/>
+  <testcase name="SharedService UpdateProject" time="0.06" classname="SharedService"/>
+  <testcase name="SharedService SuspendProject" time="0.1" classname="SharedService"/>
+  <testcase name="SharedService GetAll" time="0.077" classname="SharedService"/>
+  <testcase name="SharedService GetTaskById" time="0.054" classname="SharedService"/>
+  <testcase name="SharedService GetParentTasks" time="0.098" classname="SharedService"/>
+  <testcase name="SharedService AddTask" time="0.118" classname="SharedService"/>
+  <testcase name="SharedService DeleteTask" time="0.093" classname="SharedService"/>
+  <testcase name="SharedService UpdateTask" time="0.124" classname="SharedService"/>
+  <testcase name="SharedService EndTask" time="0.113" classname="SharedService"/>
+  <testcase name="AddTaskComponent Component Creation" time="2.277" classname="AddTaskComponent"/>
+  <testcase name="AddTaskComponent Add Function" time="1.831" classname="AddTaskComponent"/>
+  <testcase name="AddTaskComponent Edit Function" time="2.023" classname="AddTaskComponent"/>
+  <testcase name="AddTaskComponent Reset Function" time="1.902" classname="AddTaskComponent"/>
+  <testcase name="AddTaskComponent SetDefaultDates Function" time="2.04" classname="AddTaskComponent"/>
+  <testcase name="AddTaskComponent checkChanged TRUE Function" time="2.208" classname="AddTaskComponent"/>
+  <testcase name="AddTaskComponent checkChanged FALSE Function" time="1.717" classname="AddTaskComponent"/>
+  <testcase name="HomeComponent should create" time="0.082" classname="HomeComponent"/>
+  <testcase name="ProjectComponent Component Creation" time="2.066" classname="ProjectComponent"/>
+  <testcase name="ProjectComponent Add Function" time="2.028" classname="ProjectComponent"/>
+  <testcase name="ProjectComponent Edit Function" time="3.106" classname="ProjectComponent"/>
+  <testcase name="ProjectComponent Reset Function" time="1.99" classname="ProjectComponent"/>
+  <testcase name="ProjectComponent GetAll Function" time="2.202" classname="ProjectComponent"/>
+  <testcase name="ProjectComponent Suspend Function" time="2.067" classname="ProjectComponent"/>
+  <testcase name="ProjectComponent checkChanged TRUE Function" time="1.955" classname="ProjectComponent"/>
+  <testcase name="ProjectComponent checkChanged FALSE Function" time="2.127" classname="ProjectComponent"/>
+  <testcase name="HeaderComponent should create" time="0.352" classname="HeaderComponent"/>
+  <testcase name="HeaderComponent should render title in a h1 tag" time="0.711" classname="HeaderComponent"/>
+  <testcase name="UserComponent Component Creation" time="1.454" classname="UserComponent"/>
+  <testcase name="UserComponent Add Function" time="1.584" classname="UserComponent"/>
+  <testcase name="UserComponent Edit Function" time="1.962" classname="UserComponent"/>
+  <testcase name="UserComponent Reset Function" time="2.005" classname="UserComponent"/>
+  <testcase name="UserComponent GetAll Function" time="1.583" classname="UserComponent"/>
+  <testcase name="UserComponent Delete Function" time="1.856" classname="UserComponent"/>
+  <testcase name="ViewTaskComponent Component Creation" time="0.558" classname="ViewTaskComponent"/>
+  <testcase name="ViewTaskComponent AllowEnd for Future Date" time="0.51" classname="ViewTaskComponent"/>
+  <testcase name="ViewTaskComponent AllowEnd for Past Date" time="0.374" classname="ViewTaskComponent"/>
+  <testcase name="ViewTaskComponent AllowEnd for Past Date" time="0.378" classname="ViewTaskComponent"/>
+  <testcase name="ViewTaskComponent Edit Function" time="0.667" classname="ViewTaskComponent"/>
+  <testcase name="ViewTaskComponent EndTask Function" time="0.774" classname="ViewTaskComponent"/>
+  <testcase name="ViewTaskComponent Delete Function" time="0.753" classname="ViewTaskComponent"/>
+  <testcase name="AppComponent should create the app" time="0.616" classname="AppComponent"/>
+  <testcase name="AppComponent should have as title 'ProjectManagerUI'" time="0.249" classname="AppComponent"/>
+  <testcase name="FilterPipe create an instance" time="0.004" classname="FilterPipe"/>
+  <testcase name="SharedService service created" time="0.093" classname="SharedService"/>
+  <system-out>
+    <![CDATA[PhantomJS 2.1.1 (Windows 8 0.0.0) LOG: 'add'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

@@ -28,7 +28,7 @@
     "datatables.net-dt": "^1.10.19",
     "datatables.net-rowgroup-bs4": "^1.1.0",
     "intl": "^1.2.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-bootstrap": "^3.3.0",
     "rxjs": "~6.2.0",
     "zone.js": "^0.8.29"
